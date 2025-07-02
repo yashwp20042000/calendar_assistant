@@ -1,0 +1,15 @@
+
+# Backend Python Dependencies
+fastapi==0.100.0
+uvicorn
+pydantic
+google-api-python-client
+google-auth
+langchain
+langchain-community==0.3.26
+python-dotenv
+aiohttp>=3.8.3,<4.0.0
+
+# Frontend Dependencies
+streamlit
+requests
