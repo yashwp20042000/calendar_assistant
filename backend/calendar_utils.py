@@ -2,13 +2,17 @@
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import datetime, os
+import json
+import os
+from google.oauth2 import service_account
 
-SERVICE_ACCOUNT_FILE = os.getenv("SERVICE_ACCOUNT_FILE", "service_account.json")
-SCOPES = ['https://www.googleapis.com/auth/calendar']
+SCOPES = ["https://www.googleapis.com/auth/calendar"]
+service_account_info = json.loads(os.getenv("SERVICE_ACCOUNT_JSON"))
 
-credentials = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE, scopes=SCOPES
+credentials = service_account.Credentials.from_service_account_info(
+    service_account_info, scopes=SCOPES
 )
+
 service = build("calendar", "v3", credentials=credentials)
 CALENDAR_ID = os.getenv("CALENDAR_ID")
 
