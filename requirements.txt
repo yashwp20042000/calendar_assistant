@@ -5,8 +5,8 @@ uvicorn
 pydantic
 google-api-python-client
 google-auth
-langchain
-langchain_openai==0.1.9
-langchain-community==0.3.26
+langchain==0.1.16
+langchain-community==0.0.26
+langchain-openai==0.0.6
 python-dotenv
 aiohttp>=3.8.3,<4.0.0
