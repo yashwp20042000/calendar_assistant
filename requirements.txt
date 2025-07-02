@@ -6,7 +6,7 @@ pydantic
 google-api-python-client
 google-auth
 langchain==0.1.16
-langchain-community==0.0.26
+langchain-community==0.0.35
 langchain-openai==0.0.6
 python-dotenv
 aiohttp>=3.8.3,<4.0.0
